@@ -136,44 +136,44 @@
   padding-top: 50px;
 }
 
-.features .container .rightside .business-advice {
+.features .container .rightside .umb-block-list .business-advice {
   display: inline-block;
   font-family: "inter", sans-serif;
   grid-column: 1;
   margin-right: 100px;
 }
-.features .container .rightside .business-advice i {
+.features .container .rightside .umb-block-list .business-advice i {
   padding-top: 20px;
   font-size: 30px;
   padding-bottom: 20px;
 }
-.features .container .rightside .startup {
+.features .container .rightside .umb-block-list  .startup {
   display: inline-block;
   font-family: "inter", sans-serif;
   padding-top: 20px;
   display: inline-block;
   grid-column: 2;
 }
-.features .container .rightside .startup i {
+.features .container .rightside .umb-block-list .startup i {
   font-size: 30px;
   padding-bottom: 20px;
 }
-.features .container .rightside .financial-advice {
+.features .container .rightside .umb-block-list .financial-advice {
   grid-column: 1;
   display: inline-block;
   font-family: "inter", sans-serif;
 }
-.features .container .rightside .financial-advice i {
+.features .container .rightside .umb-block-list .financial-advice i {
   padding-top: 80px;
   font-size: 30px;
   padding-bottom: 20px;
 }
-.features .container .rightside .risk-management {
+.features .container .rightside .umb-block-list .risk-management {
   grid-column: 2;
   display: inline-block;
   font-family: "inter", sans-serif;
 }
-.features .container .rightside .risk-management i {
+.features .container .rightside .umb-block-list .risk-management i {
   padding-top: 80px;
   font-size: 30px;
   padding-bottom: 20px;
