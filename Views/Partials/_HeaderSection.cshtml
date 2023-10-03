@@ -1,0 +1,52 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core
+@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Cms.Core.Routing
+@using Umbraco.Extensions
+
+@inject IPublishedValueFallback PublishedValueFallback
+@inject IPublishedUrlProvider PublishedUrlProvider
+
+
+@{ 
+var site = Model.Root();
+var selection = Model.Root().Children.Where(x => x.IsVisible(PublishedValueFallback)).ToArray(); }
+
+
+<header class="header">
+      <div class="container">
+        <img src="~/images/logotype.svg" />
+        <div class="header_info">
+          <span class="info"
+            ><i class="fa-solid fa-phone"></i>+46(8)12147050</span
+          >
+          <span class="info"
+            ><i class="fa-solid fa-envelope"></i>info@crito.com</span
+          >
+          <span class="info"
+            ><i class="fa-solid fa-map-pin"></i>Sveavägen 31, 111 34
+            STOCKHOLM</span
+          >
+          <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <hr />
+          <div class="menu">
+            <div class="nav-menu">
+              <a class="@(Model.Id == site.Id ? "active": null)" href="@site.Url()">@site.Name</a>
+                @if (selection?.Length > 0)
+                {
+                    @foreach (var item in selection)
+                    {
+                     <a class="@(item.IsAncestorOrSelf(Model))" href="@item.Url(PublishedUrlProvider)">@item.Name</a>
+                    }
+                }
+            </div>
+            <button class="btn" href="/login">
+              Login<i class="fa-solid fa-arrow-turn-up"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>

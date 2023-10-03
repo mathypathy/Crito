@@ -1,0 +1,30 @@
+﻿@using Umbraco.Cms.Core.Models
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+<section class="herobanner">
+      <div class="container">
+        <div class="bannertext">
+          <h1>
+           @Model.Value("showcaseTitle")
+          </h1>
+          <p>
+           @Model.Value("showcaseDescription")
+          </p>
+          <a class="btn" href="@Model.Value("showcaseButtonURL")">@Model.Value("showcaseButtonText")<i class="fa-solid fa-arrow-turn-up"></i>
+          </a>
+          <a class="btn right-btn" href="#">Learn More<i class="fa-solid fa-arrow-turn-up"></i>
+          </a>
+        </div>
+        <div class="banner-image">
+          
+            @{
+                var showcaseImage = Model.Value<MediaWithCrops>("showcaseImage");
+                if (showcaseImage != null)
+                {
+                    <img src="@showcaseImage.MediaUrl()" />
+                }
+            }
+            
+          
+        </div>
+      </div>
+    </section>

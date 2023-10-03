@@ -1,0 +1,35 @@
+﻿@using Umbraco.Cms.Core.Models
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+ <section class="About">
+      <div class="container">
+        <div class="imgside">
+              @{
+                var aboutUsImage = Model.Value<MediaWithCrops>("aboutUsFounderImage");
+                if (aboutUsImage != null)
+                {
+                    <img src="@aboutUsImage.MediaUrl()" />
+                }
+            }
+          <div class="founder-info">
+            <p class="name">@Model.Value("FounderName")<span>Founder</span></p>
+            <p class="qoute">
+            @Model.Value("FounderQoute")
+            </p>
+          </div>
+        </div>
+        <div class="about-us">
+          <p class="headline">About Company</p>
+          <h3 class="facts">
+            @Model.Value("AboutUsTitle")
+          </h3>
+          <p>
+       @Model.Value("AboutUsInfo")
+          </p>
+          <div class="buttons">
+            <button class="btn">
+              Learn More<i class="fa-solid fa-arrow-turn-up"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>

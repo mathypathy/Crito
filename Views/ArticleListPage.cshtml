@@ -1,0 +1,16 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ArticleListPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "_Layout.cshtml";
+}
+
+<main>
+         <section class="news_header">
+            <div class="container">
+                <img src="~/images/background-lines.svg" />
+                @await Html.PartialAsync("_BreadCrumbSection")
+                <h3>News & Articles</h3>
+            </div>
+        </section>
+</main>
