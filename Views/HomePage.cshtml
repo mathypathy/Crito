@@ -1,16 +1,15 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
+@using Umbraco.Cms.Core.Models
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>;
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
 	Layout = "_Layout.cshtml";
 	ViewData["Title"] = @Model.Value("pageTitle");
 }
-
-
-
 <main>
     @await Html.PartialAsync("_ShowcaseSection")
     @await Html.PartialAsync("_BrandsSection")
+    <!-- Features -->
     <section class="features">
       <div class="container">
         <div class="leftside">
@@ -27,5 +26,77 @@
           </div>
     </section>
     @await Html.PartialAsync("_AboutUsSection")
+      <!-- Our Services -->
+    <section class="our-services">
+      <div class="container">
+        <div class="umb-block-list">
+            <div class="text">
+                <p>@Model.Value("oStitle")</p>
+                <h3>
+                    @Model.Value("oSheading")
+                </h3>
+            </div>
+            <div class="boxes">
+                @Html.GetBlockListHtml(Model.OurService)
+                <button class="btn" href="@Model.Value("oSButtonURL")">Browse Services</button>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- ReasonsToChooseUs -->
+    <section class="choose_us">
+        <div class="container">
+            <div class="text">
+                <div class="headline">
+                    <p>@Model.Value("chooseUsTitle")</p>
+                    <h5>
+                        @Model.Value("chooseUsHeading")
+                    </h5>
+                </div>
+                    <div class="reasons">
+                        @Html.GetBlockListHtml(Model.ReasonsToChooseUs)
+                    </div>´
+            </div>
+            <div class="rightimage">
+            @{
+                var chooseUsImage = Model.Value<MediaWithCrops>("chooseUsImg");
+                if (chooseUsImage != null)
+                {
+                    <img src="@chooseUsImage.MediaUrl()" />
+                }
+            }
+                <div class="greybox"></div>
+            </div>
+        </div>
+    </section>
+    <!-- PROJECTS -->
+    <section class="projects">
+      <div class="text">
+        <p>@Model.Value("projectTitle")</p>
+        <h3>@Model.Value("projectUnderTitle")</h3>
+      </div>
+      <div class="container">
+            @Html.GetBlockListHtml(Model.ProjectBlockList)
+      </div>
+      <div class="container" id="con2">
+        <button
+          style="
+            width: 15%;
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+          ">
+          All Recent Projects<i class="fa-solid fa-arrow-trend-up"></i>
+        </button>
+      </div>
+    </section
+    
+    @await Html.PartialAsync("_OurTeamSection")
     
 </main>
+
+
+
+
+
+

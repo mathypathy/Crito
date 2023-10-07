@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ReasonsToChooseUs)Model.Content;
+}
+    <!-- LÄGG IN ReasonsToChooseUs HÄR -->
+    
+      
+            <button disabled><i class="@content.Value("reasonIcon")"></i></button>
+            <div>
+              <h5>@content.Value("reasonTitle")</h5>
+              <p>@content.Value("reasonHeading")</p>
+            </div>
+          

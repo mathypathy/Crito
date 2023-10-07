@@ -1,0 +1,41 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+   
+    <!-- Our team-->
+
+    <section class="our_team">
+        <div class="container text">
+            <div class="top">
+                <p>@Model.Value("ourTeamTitle")</p>
+                <h5>@Model.Value("ourTeamUnderTitle")</h5>
+            </div>
+            <button>
+               Browse Team
+            </button>
+        </div>
+        <!-- I Didnt get the carousel to work the way i wanted so i hardcoded this part. #sadface -->
+        <div class="container">
+            <div class="workers">
+               <div class="item">
+                <img src="~/images/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg" />
+                   <h5>Kristine Palmer</h5>
+                   <p>Chief Operator Officer</p>
+               </div>
+                <div class="item">
+                <img src="~/images/itay-verchik-6ZKGBzrDd3I-unsplash.jpg" />
+                   <h5>Mark Aubri</h5>
+                   <p>Senior Consultant</p>
+               </div>
+                <div class="item">
+                   <img src="~/images/christina-wocintechchat-com-SJvDxw0azqw-unsplash.jpg"/>
+                   <h5>Kimberly Hansen</h5>
+                   <p>Senior Consultant</p>
+               </div>
+                <div class="item">
+                <img src="~/images/christina-wocintechchat-com-Zpzf7TLj_gA-unsplash.jpg" />
+                   <h5>Justin Willoman</h5>
+                   <p>Senior Tech Consultant</p>
+               </div>
+            </div>
+        </div>
+    </section>
+    
