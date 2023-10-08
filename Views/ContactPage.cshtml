@@ -36,7 +36,7 @@
         <div class="formdiv">
           <div class="formtext">
             <h4>Leave Us A Message<br />For Any Information.</h4>
-            <form method="post" novalidation>
+            <form id="contactForm" method="post" novalidate>
             <input id="name" class="form-control" placeholder="name.." />
              <span id="nameValidation" class="validation-message"></span>
             <input id="email" class="form-control" placeholder="email.." />
@@ -47,10 +47,7 @@
               rows="4"
             ></textarea>
              <span id="messageValidation" class="validation-message"></span>
-             
-           
-
-            <button>Send Message</button>
+            <button type="submit">Send Message</button>
             </form>
           </div>
         </div>
