@@ -1,8 +1,57 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ArticleDetailPage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Services;
+@using Umbraco.Cms.Core.Models.PublishedContent;
+@inject IUserService UserService;
 @{
 	Layout = "_LayoutWithBreadcrumb.cshtml";
+	var userService = UserService;
+	var image = Model.Value<IPublishedContent>("articleImage");
 }
 
 <!-- Lägg in article detail delen från html här. -->
+
+<section class="detailpage">
+      <div class="container">
+        <div class="headertext">
+          <h5>@Model.Name</h5>
+        </div>
+        <div class="infotext">
+          <span>@Model.CreateDate.ToString("MMM dd, yyyy")</span>
+          <i class="fa-solid fa-circle"></i>
+          <span>@Model.Value("articleCategory")</span>
+          <i class="fa-solid fa-circle"></i>
+          <span>@Model.CreatorName(UserService)</span>
+        </div>
+       <div class="grid">
+          <div class="article">
+              <div class="content">
+                <img src="@image.Url()" />
+                <p>@Model.Value("articleContent")</p>
+                 <div class="tags">
+                     @foreach(var tag in Model.Value<IEnumerable<string>>("articleTags"))
+                     {
+                         <span>
+                             @tag
+                         </span>
+                     }
+                   
+                 </div>
+              </div>
+           
+          </div>
+          <aside>
+              <div class="searchbox">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input type="text" placeholder="search here"/>
+              </div>
+              <div class="recent-posts">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+          </aside>
+      </div>
+      </div>
+    </section>

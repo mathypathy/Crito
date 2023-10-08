@@ -731,12 +731,12 @@ footer .copyright i {
   width: 300px;
   border: 0;
 }
-.news_articles .container .grid .card img {
+.news_articles .container .grid .card .card_url img {
   width: 300px;
   height: 200px;
   position: relative;
 }
-.news_articles .container .grid .card .date {
+.news_articles .container .grid .card .card_url .date {
   text-align: center;
   position: absolute;
   background-color: #f9d783;
@@ -748,22 +748,22 @@ footer .copyright i {
   flex-direction: column;
   padding-top: 5px;
 }
-.news_articles .container .grid .card .date h6 {
+.news_articles .container .grid .card .card_url .date h6 {
   font-family: "DM Sans", sans-serif;
   font-weight: bolder;
   margin: 0;
 }
-.news_articles .container .grid .card .date p {
+.news_articles .container .grid .card .card_url .date p {
   margin: 0;
   color: grey;
   font-weight: bold;
   font-family: "DM Sans", sans-serif;
 }
-.news_articles .container .grid .card .category {
+.news_articles .container .grid .card .card_url .category {
   margin-top: 5px;
   color: grey;
 }
-.news_articles .container .grid .card .sneakpeak {
+.news_articles .container .grid .card .card_url .sneakpeak {
   font-size: 10px;
   color: grey;
   font-family: "DM Sans", sans-serif;
@@ -907,3 +907,82 @@ footer .copyright i {
   font-size: 14px;
   border: none;
 } /*# sourceMappingURL=style.css.map */
+
+
+/* article details */
+.detailpage{
+    
+}
+ .detailpage .container{
+    
+ }
+ .detailpage .container .headertext{
+    margin-top:20px;
+   margin-bottom:20px;        
+    
+
+}
+.detailpage .container .headertext h5{
+    font-family:$DMsans;
+    font-weight:bold;
+    font-size:20px;
+
+}
+.detailpage .container .infotext{
+    font-family:$inter;
+    font-weight:bold;
+    font-size:16px;
+    margin-bottom:20px;
+
+
+
+}
+.detailpage .container .infotext span{
+    
+}
+.detailpage .container .infotext i{
+    color: #f9d783;
+}
+.detailpage .container {
+
+    
+}
+.detailpage .container .grid {
+    display:flex;
+    
+  
+}
+.detailpage .container .grid .article{
+flex:1;
+  
+}
+.detailpage .container   .grid .article .content{
+
+
+}
+.detailpage .container   .grid .article .content img{
+    width:80%;
+    height:80%;
+    object-fit:cover;
+}
+.detailpage .container .grid   .article .content p{
+    
+}
+.detailpage .container  .grid  .article .content .tags{
+    background-color:grey;
+    margin:0;
+    padding:0;
+}
+.detailpage .container .grid  .article .aside{
+  flex:2;
+ 
+}
+.detailpage .container  .grid  .article .aside .searchbox{
+    
+}
+.detailpage .container  .grid  .article .aside .recent-posts{
+    
+}                    
+
+
+
