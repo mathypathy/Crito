@@ -1,0 +1,68 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ContactPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "_LayoutWithBreadcrumb.cshtml";
+}
+
+
+
+  <section class="connect_section">
+      <div class="container">
+        <div class="infocard1">
+          <button><i class="fa-solid fa-map-pin"></i></button>
+          <div>
+            <h6>Visit Us</h6>
+            <p>Sveavägen 31</p>
+            <p>111 34 stockholm</p>
+          </div>
+        </div>
+        <div class="infocard2">
+          <button><i class="fa-solid fa-phone"></i></button>
+          <div>
+            <h6>Call Us</h6>
+            <p>+46 (8) 121 470 50</p>
+            <p>+46 (8) 121 470 51</p>
+          </div>
+        </div>
+        <div class="infocard3">
+          <button><i class="fa-solid fa-envelope"></i></button>
+          <div>
+            <h6>Email Us</h6>
+            <p>info@crito.com</p>
+            <p>support@crito.com</p>
+          </div>
+        </div>
+        <div class="formdiv">
+          <div class="formtext">
+            <h4>Leave Us A Message<br />For Any Information.</h4>
+            <form method="post" novalidation>
+            <input id="name" class="form-control" placeholder="name.." />
+             <span id="nameValidation" class="validation-message"></span>
+            <input id="email" class="form-control" placeholder="email.." />
+            <span id="emailValidation" class="validation-message"></span>
+            <textarea id="message"
+              class="form-control non-resizable"
+              placeholder="Type your message here..."
+              rows="4"
+            ></textarea>
+             <span id="messageValidation" class="validation-message"></span>
+             
+           
+
+            <button>Send Message</button>
+            </form>
+          </div>
+        </div>
+        
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31284.278845775054!2d17.11519163072194!3d60.65519364101221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sse!4v1694069320077!5m2!1sen!2sse"
+          width="1020"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
