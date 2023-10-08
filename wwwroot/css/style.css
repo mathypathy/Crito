@@ -696,6 +696,7 @@ footer .copyright i {
   height: 170px;
 }
 .news_header .container .crumbs {
+    
   margin-top: 50px;
 }
 .news_header .container .crumbs .breadcrumb {
@@ -731,6 +732,12 @@ footer .copyright i {
   width: 300px;
   border: 0;
 }
+
+.news_articles .container .grid .card .card_url {
+  color:black;
+  text-decoration:none;
+}
+
 .news_articles .container .grid .card .card_url img {
   width: 300px;
   height: 200px;
@@ -966,23 +973,65 @@ flex:1;
     object-fit:cover;
 }
 .detailpage .container .grid   .article .content p{
+    width:850px;
     
 }
 .detailpage .container  .grid  .article .content .tags{
-    background-color:grey;
+    text-align:Center;
+    background-color:lightgrey;
+    width:100px;
     margin:0;
     padding:0;
+    border:1px solid black;
+    font-weight:bold;
+    font-family:$inter;
+    margin-bottom:20px;
+    color:black
 }
-.detailpage .container .grid  .article .aside{
-  flex:2;
+.detailpage .container .grid   .sidemenu{
+    text-align:Center;
  
 }
-.detailpage .container  .grid  .article .aside .searchbox{
+.detailpage .container  .grid   .sidemenu .searchbox{
+     margin-bottom:20px;
+     margin-right:5px;
+}
+.detailpage .container  .grid  .sidemenu .recent-posts{
+    margin-top:10px;
+    display:block;
+    border:2px solid lightgrey;
+    height:400px;
+    width:300px
+    text-align:center;
+    justify-content:center;
+
     
 }
-.detailpage .container  .grid  .article .aside .recent-posts{
+.detailpage .container  .grid  .sidemenu .recent-posts h3{
+  text-decoration:underline;
+  
+}  
+
+.detailpage .container  .grid  .sidemenu .recent-posts a{
+  display:Block;
+  color:black;
+  text-decoration:none;
+  margin-bottom:5px;
+  margin-top:10px;
+}        
+
+
+.detailpage .container  .grid  .sidemenu .categories{
+    margin-top:20px;
+    display:block;
+    border:2px solid lightgrey;
+    height:200px;
+    width:300px
+    text-align:center;
+    justify-content:center;
+
     
-}                    
-
-
-
+}  
+.detailpage .container  .grid  .sidemenu .categories p{
+    margin-top:10px;
+}
